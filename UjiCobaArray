@@ -1,0 +1,65 @@
+package pratikumarray;
+
+public class PratikumArray {
+
+    public static void main(String[] args) {
+        singledimensi();
+        singledimensi1();
+        multidimensi();
+    }
+    public static void singledimensi() {
+        int nilai [] =  new int [3];
+        nilai [0] = 70;
+        nilai [1] = 80;
+        nilai [2] = 65;
+        double ratarata = 0.0;
+        for (int i=0; i<nilai.length; i++)ratarata+=nilai [i];
+        ratarata/=nilai.length;
+        System.out.println("Nilai rata-rata = "+ ratarata);
+    }
+    public static void singledimensi1() {
+        int [] jumlahhari;
+        jumlahhari  = new int [7];
+        jumlahhari [0] = 31;
+        jumlahhari [1] = 28;
+        jumlahhari [2] = 31;
+        jumlahhari [3] = 30;
+        jumlahhari [4] = 31;
+        jumlahhari [5] = 30;
+        jumlahhari [6] = 31;
+        System.out.println("Bulan Januari memmiliki " + jumlahhari  [2]+ "hari. ");
+    }
+    public static void multidimensi() {
+       int nilai [][]=new int [3][3];
+       nilai [0][0]=85;
+       nilai [0][1]=81;
+       nilai [0][2]=78;
+       nilai [1][0]=65;
+       nilai [1][1]=73;
+       nilai [1][2]=71;
+       nilai [2][0]=94;
+       nilai [2][1]=84;
+       nilai [2][2]=93;
+       String MP[]={"RPL","PBO","MAT"};
+       double ratarataMP[]= new double[nilai.length];
+       for (int i=0; i<nilai.length; i++){
+       for (int j=0; j<nilai[0].length; j++){
+       ratarataMP[i]+=nilai [i][j];
+       }
+       ratarataMP[i]/=nilai[0].length;
+       }
+ System.out.println("Nilai Mata Pelajaran\n");
+
+ System.out.println ("MK\tMinggu1\tMinggu2\tMinggu3\tRata-Rata");
+
+ for (int i=0; i<nilai.length; i++){
+ System.out.print(MP[i]+"\t");
+     for (int j = 0; j < nilai[0].length; j++) {
+         System.out.print(nilai[i][j]+ "\t");
+     }
+     for (int j=0;j<nilai[0].length; j++){
+     }
+     System.out.print(ratarataMP[i]+"\n");
+ }
+ }
+ }

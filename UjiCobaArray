@@ -1,11 +1,12 @@
-package pratikumarray;
-
 public class PratikumArray {
 
     public static void main(String[] args) {
         singledimensi();
         singledimensi1();
         multidimensi();
+        multidemensi2();
+        pratikum1();
+        pratikum12();
     }
     public static void singledimensi() {
         int nilai [] =  new int [3];
@@ -41,7 +42,8 @@ public class PratikumArray {
        nilai [2][1]=84;
        nilai [2][2]=93;
        String MP[]={"RPL","PBO","MAT"};
-       double ratarataMP[]= new double[nilai.length];
+       //ini sebelumnya tipe data double tapi karena terdapat bil desimal di belakang di ganti int 
+       int ratarataMP[]= new int[nilai.length];
        for (int i=0; i<nilai.length; i++){
        for (int j=0; j<nilai[0].length; j++){
        ratarataMP[i]+=nilai [i][j];
@@ -62,4 +64,35 @@ public class PratikumArray {
      System.out.print(ratarataMP[i]+"\n");
  }
  }
+    public static void multidemensi2() {
+        //Program ini membagikan nilai dengan menggunnkan array jenis multidimensi
+        int [][][] nilai = {
+            {{51, 89}, {60, 59}, {52, 47}},
+            {{39, 58}, {71, 85}, {39, 78}},
+            {{81, 82}, {51, 86}, {59, 31}}
+        };
+        for (int i = 0; i < nilai.length; i++) {
+            
+            for (int j = 0; j < nilai[0].length; j++) {
+                
+                for (int k = 0; k < nilai[0][0].length; k++) {
+                    System.out.print("nilai[" +i+ "] [" +j + "] [" +k+ "] =" + nilai [i][j][k]+ "\t");                   
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+    public static void pratikum1(){
+        int bilangan[] = {1,2,3,4,5};
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.println(i);
+        }
+    }
+    public static void pratikum12(){
+        int bilangan[] =  {1,2,3,4,5,6,7,8};
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.println(i);
+        }
+    }
  }
